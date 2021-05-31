@@ -1,6 +1,6 @@
 #!/bin/bash
 
-out="$(ping -w 2 -q 10.10.0.2 | grep 'packets')"; 
+out="$(ping -w 2 -q ip_address | grep 'packets')"; 
 pr="$(echo $out | awk '{print $1}')";
 pl="$(echo $out | awk '{print $4}')";
 if [[ $pl -eq 0 ]]
